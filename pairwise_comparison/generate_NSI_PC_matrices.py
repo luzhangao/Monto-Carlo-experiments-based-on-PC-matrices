@@ -301,10 +301,10 @@ def compute_curve(x, y):
     So fit a curve function for it.
     :param x: std_rate, list
     :param y: mean of Kii, list
-    :return: popt float
-             coefficient a
-             pcov float
-             coefficient b
+    :return: popt array
+             Optimal values for the parameters, [a, b]
+             pcov 2-D array
+             The estimated covariance of popt.
     """
     popt, pcov = curve_fit(fit_function, x, y)
     return popt, pcov
